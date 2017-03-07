@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D643CE965A93AB4FF229C752 /* libPods-Alice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FEE0172BEFE85CF8222CC47 /* libPods-Alice.a */; };
 		E17814CD1E6EE40200FE26A3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E17814CC1E6EE40200FE26A3 /* main.m */; };
 		E17814D01E6EE40200FE26A3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E17814CF1E6EE40200FE26A3 /* AppDelegate.m */; };
 		E17814D31E6EE40200FE26A3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E17814D21E6EE40200FE26A3 /* ViewController.m */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0FEE0172BEFE85CF8222CC47 /* libPods-Alice.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Alice.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		846AF0261BD4283A9617ED80 /* Pods-Alice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Alice.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Alice/Pods-Alice.debug.xcconfig"; sourceTree = "<group>"; };
+		BC4ECCE2ADBD47DADCE22AA0 /* Pods-Alice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Alice.release.xcconfig"; path = "Pods/Target Support Files/Pods-Alice/Pods-Alice.release.xcconfig"; sourceTree = "<group>"; };
 		E17814C81E6EE40200FE26A3 /* Alice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E17814CC1E6EE40200FE26A3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E17814CE1E6EE40200FE26A3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -33,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D643CE965A93AB4FF229C752 /* libPods-Alice.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3DBB9DE88DC7E7E73AB560DF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0FEE0172BEFE85CF8222CC47 /* libPods-Alice.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D7A3490824A650025A775618 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				846AF0261BD4283A9617ED80 /* Pods-Alice.debug.xcconfig */,
+				BC4ECCE2ADBD47DADCE22AA0 /* Pods-Alice.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		E17814BF1E6EE40200FE26A3 = {
 			isa = PBXGroup;
 			children = (
 				E17814CA1E6EE40200FE26A3 /* Alice */,
 				E17814C91E6EE40200FE26A3 /* Products */,
+				D7A3490824A650025A775618 /* Pods */,
+				3DBB9DE88DC7E7E73AB560DF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,9 +110,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E17814DF1E6EE40200FE26A3 /* Build configuration list for PBXNativeTarget "Alice" */;
 			buildPhases = (
+				E88052A59401B64FA37C5C6A /* [CP] Check Pods Manifest.lock */,
 				E17814C41E6EE40200FE26A3 /* Sources */,
 				E17814C51E6EE40200FE26A3 /* Frameworks */,
 				E17814C61E6EE40200FE26A3 /* Resources */,
+				F174A4D6300BAA09DCB7AD14 /* [CP] Embed Pods Frameworks */,
+				72EEF00CA6216D996435A91F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -145,6 +172,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		72EEF00CA6216D996435A91F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Alice/Pods-Alice-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E88052A59401B64FA37C5C6A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F174A4D6300BAA09DCB7AD14 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Alice/Pods-Alice-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E17814C41E6EE40200FE26A3 /* Sources */ = {
@@ -269,6 +344,7 @@
 		};
 		E17814E01E6EE40200FE26A3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 846AF0261BD4283A9617ED80 /* Pods-Alice.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = R2MRA258V6;
@@ -281,6 +357,7 @@
 		};
 		E17814E11E6EE40200FE26A3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC4ECCE2ADBD47DADCE22AA0 /* Pods-Alice.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = R2MRA258V6;
