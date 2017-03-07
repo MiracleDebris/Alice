@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import <Lottie/Lottie.h>
 
 @interface ViewController ()
 
@@ -16,14 +17,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    self.view.backgroundColor = [UIColor blackColor];
+    
+    LOTAnimationView *anim = [LOTAnimationView animationNamed:@"Alice"];
+    anim.bounds = self.view.bounds;
+    anim.center = self.view.center;
+    anim.contentMode = UIViewContentModeScaleAspectFill;
+    anim.loopAnimation = YES;
+    [self.view addSubview:anim];
+    
+    [anim play];
 }
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 
 @end

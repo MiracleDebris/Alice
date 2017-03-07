@@ -14,6 +14,9 @@
 		E17814D61E6EE40200FE26A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E17814D41E6EE40200FE26A3 /* Main.storyboard */; };
 		E17814D81E6EE40200FE26A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E17814D71E6EE40200FE26A3 /* Assets.xcassets */; };
 		E17814DB1E6EE40200FE26A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E17814D91E6EE40200FE26A3 /* LaunchScreen.storyboard */; };
+		E17814E51E6EE58500FE26A3 /* Alice1.json in Resources */ = {isa = PBXBuildFile; fileRef = E17814E31E6EE58500FE26A3 /* Alice1.json */; };
+		E17814E61E6EE58500FE26A3 /* Alice.json in Resources */ = {isa = PBXBuildFile; fileRef = E17814E41E6EE58500FE26A3 /* Alice.json */; };
+		E17814E81E6EE58F00FE26A3 /* alice(CS5).aep in Resources */ = {isa = PBXBuildFile; fileRef = E17814E71E6EE58F00FE26A3 /* alice(CS5).aep */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		E17814D71E6EE40200FE26A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E17814DA1E6EE40200FE26A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E17814DC1E6EE40200FE26A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E17814E31E6EE58500FE26A3 /* Alice1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Alice1.json; sourceTree = "<group>"; };
+		E17814E41E6EE58500FE26A3 /* Alice.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Alice.json; sourceTree = "<group>"; };
+		E17814E71E6EE58F00FE26A3 /* alice(CS5).aep */ = {isa = PBXFileReference; lastKnownFileType = file; path = "alice(CS5).aep"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +88,7 @@
 		E17814CA1E6EE40200FE26A3 /* Alice */ = {
 			isa = PBXGroup;
 			children = (
+				E17814E21E6EE56F00FE26A3 /* json and aep */,
 				E17814CE1E6EE40200FE26A3 /* AppDelegate.h */,
 				E17814CF1E6EE40200FE26A3 /* AppDelegate.m */,
 				E17814D11E6EE40200FE26A3 /* ViewController.h */,
@@ -101,6 +108,16 @@
 				E17814CC1E6EE40200FE26A3 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E17814E21E6EE56F00FE26A3 /* json and aep */ = {
+			isa = PBXGroup;
+			children = (
+				E17814E31E6EE58500FE26A3 /* Alice1.json */,
+				E17814E41E6EE58500FE26A3 /* Alice.json */,
+				E17814E71E6EE58F00FE26A3 /* alice(CS5).aep */,
+			);
+			name = "json and aep";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,6 +184,9 @@
 			files = (
 				E17814DB1E6EE40200FE26A3 /* LaunchScreen.storyboard in Resources */,
 				E17814D81E6EE40200FE26A3 /* Assets.xcassets in Resources */,
+				E17814E81E6EE58F00FE26A3 /* alice(CS5).aep in Resources */,
+				E17814E51E6EE58500FE26A3 /* Alice1.json in Resources */,
+				E17814E61E6EE58500FE26A3 /* Alice.json in Resources */,
 				E17814D61E6EE40200FE26A3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -387,6 +407,7 @@
 				E17814E11E6EE40200FE26A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
